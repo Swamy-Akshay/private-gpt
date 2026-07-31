@@ -1,6 +1,16 @@
-.venv/
+# Database
+*.db
+
+# Coverage
+.coverage
+htmlcov/
+
+# Pytest
+.pytest_cache/
+
+# Python
 __pycache__/
 *.pyc
-.env
-.vscode/
-.idea/
+
+# Virtual Environment
+.venv/
