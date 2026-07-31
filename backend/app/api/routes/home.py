@@ -1,12 +1,14 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
+
+from backend.app.database.session import get_db
 
 router = APIRouter()
 
 
 @router.get("/")
-def home():
-    return {"message": "Welcome to Private GPT!"}
-
-@router.get("/error")
-def error():
-    raise Exception("Testing")
+def home(db: Session = Depends(get_db)):
+    return {
+        "message": "Welcome to Private GPT!",
+        "database": "connected"
+    }

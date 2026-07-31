@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     DEBUG: bool
     HOST: str
     PORT: int
+    DATABASE_URL: str
 
     model_config = SettingsConfigDict(
         env_file=".env",

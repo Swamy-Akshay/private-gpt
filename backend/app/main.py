@@ -3,6 +3,7 @@ from backend.app.api.router import router
 from backend.app.core.config import settings
 from backend.app.core.logger import setup_logger, logger
 from backend.app.core.exceptions import register_exception_handlers
+
 setup_logger()
 
 app = FastAPI(
