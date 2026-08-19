@@ -1,6 +1,9 @@
 # Database
 *.db
 
+# Uploaded documents
+storage/documents/
+
 # Coverage
 .coverage
 htmlcov/
