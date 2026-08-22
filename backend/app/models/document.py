@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, DateTime
+from sqlalchemy import Column, Integer, String, DateTime, Text
 from sqlalchemy.sql import func
 
 from backend.app.database.base import Base
@@ -12,3 +12,6 @@ class Document(Base):
     file_path = Column(String, nullable=False)
     content_type = Column(String, nullable=False)
     created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    extracted_text = Column(Text, nullable=True)
+
+
